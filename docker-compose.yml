@@ -1,7 +1,7 @@
 version: '3.9'
 
 services:
-  deepstream:
+  deepstream_khalid:
     build: .
     container_name: deepstream_app
     network_mode: host
@@ -10,7 +10,7 @@ services:
       - DISPLAY=${DISPLAY}
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
-      - ~/Desktop/deepstream/:/opt/nvidia/deepstream/deepstream-7.1/sources/my_data
+      - ./:/opt/nvidia/deepstream/deepstream-7.1/sources/my_data
     working_dir: /opt/nvidia/deepstream/deepstream-7.1
     deploy:
       resources:
